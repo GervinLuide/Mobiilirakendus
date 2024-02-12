@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, Text } from "react-native";
+import {TouchableOpacity, Text } from "react-native";
 
 import {styles} from './styles'
 
@@ -11,9 +11,9 @@ const Button = ({title}) => {
 
 
     return(
-        <Pressable onPress={HandlePress} style={styles.container}>
-            <Text>{title}</Text>
-        </Pressable>
+        <TouchableOpacity activeOpacity={0.6} onPress={HandlePress} style={styles.container}>
+            <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
     )
 }
 export default Button
