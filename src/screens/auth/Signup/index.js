@@ -7,6 +7,7 @@ import Checkbox from "../../../components/Checkboxs";
 import Button from "../../../components/Button";
 import {styles} from "./styles"
 import Separator from "../../../components/Separator";
+import GoogleLogin from "../../../components/GoogleLogin";
 
 
 const Signup = () => {
@@ -24,7 +25,8 @@ const Signup = () => {
             </View>
             <Button style={styles.button} title="Sign In"/>
             <Separator text="Or sign up with"/>
+            <GoogleLogin />
         </View>
     )
 }
-export default Signup
+export default React.memo(Signup)
