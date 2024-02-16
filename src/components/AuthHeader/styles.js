@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     container:{
         padding: 10,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 54
     },
     image: {
         width: 18,
