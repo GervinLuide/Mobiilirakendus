@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.blue,
         paddingVertical: 20,
         paddingHorizontal: 8,
-        marginHorizontal: 20,
         borderRadius: 8,
         width: '100%'
     },

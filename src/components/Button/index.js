@@ -3,7 +3,7 @@ import {TouchableOpacity, Text } from "react-native";
 
 import {styles} from './styles'
 
-const Button = ({title}) => {
+const Button = ({title, onPress, style}) => {
     const HandlePress = () => (
         console.log('button is clicked')
     )
@@ -11,7 +11,7 @@ const Button = ({title}) => {
 
 
     return(
-        <TouchableOpacity activeOpacity={0.6} onPress={HandlePress} style={styles.container}>
+        <TouchableOpacity activeOpacity={0.6} onPress={onPress} style={[styles.container, style]}>
             <Text style={styles.title}>{title}</Text>
         </TouchableOpacity>
     )
