@@ -8,13 +8,20 @@ import {styles} from "./styles"
 import Separator from "../../../components/Separator";
 import GoogleLogin from "../../../components/GoogleLogin";
 
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const Signin = () => {
+
+const Signin = ({navigation}) => {
+
+    const onBack = () => {
+        navigation.goBack()
+    }
 
     const [checked, setChecked] = useState(false)
     return (
+        <SafeAreaView>
         <View style={styles.container}>
-            <AuthHeader title={"Sign In"}/>
+            <AuthHeader onBackPress={onBack} title={"Sign In"}/>
             <Input label="Email" placeholder="example@gmail.com"/>
             <Input isPassword label="Password" placeholder="******"/>
             <Button style={styles.button} title="Sign In"/>
@@ -24,6 +31,7 @@ const Signin = () => {
 
             </Text>
         </View>
+        </SafeAreaView>
     )
 }
 export default React.memo(Signin)

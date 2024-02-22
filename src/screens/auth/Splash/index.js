@@ -8,7 +8,17 @@ import{
 import Button from "../../../components/Button"
 import {styles} from "./styles"
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+    console.log('navigation =>', navigation)
+
+    const onSignup = () => {
+        navigation.navigate('Signup')
+    }
+
+    const onSignin = () => {
+        navigation.navigate('Signin')
+    }
+
     return (
         <View style={styles.container}>
             <Image resizeMode="contain" style={styles.Image} source={require('/Users/student/AwesomeProject/src/assets/splash_image.png')}></Image>
@@ -18,14 +28,12 @@ const Splash = () => {
                 <Text style={styles.title}>Here!</Text>
             </View>
 
-
-
-            <Button title="Sign Up"/>
-            <Pressable hitSlop={20}>
+            <Button title="Sign Up" onPress={onSignup}/>
+            <Pressable onPress={onSignin} hitSlop={20}>
                 <Text style={styles.footerText}>Sign In</Text>
             </Pressable>
         </View>
     )
 }
-export default Splash
+export default React.memo(Splash)
 
