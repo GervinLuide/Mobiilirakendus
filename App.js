@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {SafeAreaView} from "react-native";
 import Splash from "./src/screens/auth/Signup/index";
 import Signup from "./src/screens/auth/Signup/index";
+import Signin from "./src/screens/auth/Signin";
 import {GoogleSignin} from "@react-native-google-signin/google-signin";
 
 import Config from "react-native-config";
@@ -17,7 +18,7 @@ const App = () => {
   }, [])
   return (
     <SafeAreaView>
-      <Signup />
+      <Signin />
     </SafeAreaView>
   );
 };
