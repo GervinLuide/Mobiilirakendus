@@ -4,10 +4,11 @@ import {colors} from "../../../utils/colors";
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 12,
-        height: "100%",
-        flexDirection: "column",
-
+        padding: 24,
+    },
+    list: {
+        paddingVertical: 24
     }
+
 
 })
