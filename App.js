@@ -7,6 +7,7 @@ import {GoogleSignin} from "@react-native-google-signin/google-signin";
 import {colors} from "./src/utils/colors";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import ProductDetails from "./src/screens/app/ProductDetails";
 
 
 import Home from "./src/screens/app/Home";
@@ -95,6 +96,7 @@ const App = () => {
             isSignedIn ? (
               <>
                 <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}}/>
+                <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
               </>
             ) : (
              <>

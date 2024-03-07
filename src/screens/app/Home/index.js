@@ -48,9 +48,13 @@ const Home = () => {
     
     
     const renderProductItem = ({ item }) => {
-        console.log(item)
+        const onProductPress = (product) => {
+            NavigationPreloadManager.navigate('productDetails', {product})
+        }
+
         return (
-            <ProductHomeItem {...item} />
+            <ProductHomeItem onPress={() => onProductPress(item)} 
+            {...item} />
         )
     }
 
