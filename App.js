@@ -10,7 +10,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 
 import Home from "./src/screens/app/Home";
-import Favourites from "./src/screens/app/Favourites";
+import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
 
 
@@ -38,7 +38,7 @@ const Tabs = () => {
           icon = focused
           ? require("./src/assets/tabs/clarity_home-solid.png")
           : require("./src/assets/tabs/clarity_home-solid-2.png");
-        } else if (route.name === "Favourites") {
+        } else if (route.name === "Favorites") {
           icon = focused
           ? require("./src/assets/tabs/marker1-2.png")
           : require("./src/assets/tabs/marker1.png");
@@ -57,7 +57,7 @@ const Tabs = () => {
     })}
     >
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Favourites" component={Favourites} />
+      <Tab.Screen name="Favorites" component={Favorites} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
